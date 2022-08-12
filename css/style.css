@@ -112,9 +112,12 @@
   
   .home-article img {
     width: 300px;
+    padding-right: 50px;
+    padding-bottom: 40px;
   }
   
   .home-article-content {
+    
     align-self: center;
     padding: 25px;
   }
@@ -126,7 +129,8 @@
   /* .home-articles{} */
   .footer {
     height: 50px;
-    background-color: var(--main-bg-color);
+    /* background-color: var(--main-bg-color); */
+    background-color: lightcoral;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,4 +140,47 @@
   
   .footer a {
     color: white;
+  }
+
+
+   /* Screen top */
+   .scrollTop
+   {
+       position: fixed;
+     
+       bottom: 800px;
+       right: 40px;
+       width: 60px;
+       height: 60px;
+     background: lightgreen url(upward.png);
+       border-radius: 50%;
+       background-size: 40%;
+       background-position: center;
+       background-repeat: no-repeat;
+       cursor: pointer;
+       z-index: 100000;
+       visibility: hidden;
+       opacity: 0;
+       transition: 0.5s;
+   }
+   .scrollTop.active
+   {
+       visibility: visible;
+       opacity: 1;
+       bottom: 40px;
+   }
+
+
+   .zoom{
+    transition: transform 0.8s;
+   }
+
+   .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+  h3:hover{
+    text-decoration: underline;
   }
